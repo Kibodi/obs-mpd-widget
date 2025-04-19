@@ -1,0 +1,74 @@
+@keyframes card-text {
+    0% { transform: scale3d(0, 0, 1) rotate3d(0,0,1,90deg) translate3d(800px, 0px, 0px); opacity: 0}
+    70% { transform: scale3d(1.2, 1.2, 1) rotate3d(0,0,1,-10deg); opacity: 1}
+    100% { transform: scale3d(1, 1, 1) rotate3d(0,0,1,0deg) translate3d(0px, 0px, 0px)}
+}
+@keyframes card-slide {
+    0% { transform: rotate3d(0,0,1,0deg) translate(0px, 0px)}
+    100% { transform: rotate3d(0,0,1,10deg) translate(-1920px, -200px)}
+}
+
+@keyframes cover-slide {
+    0% { transform: scale3d(0.7, 0.7, 1) rotate3d(0,0,1,-5deg) translate3d(-300px, 0px, 0px)}
+    100% { transform: scale3d(1, 1, 1) rotate3d(0,0,1,0deg) translate3d(0px, 0px, 0px)}
+}
+
+.letter-title {
+    font-size: 60px;
+    display: inline-block;
+    transform: scale3d(0, 0, 1) rotate3d(0,0,1,90deg) translate3d(800px, 0px, 0px);
+    animation-name: card-text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    transform-origin: bottom center;
+    -webkit-text-stroke: 1px #000;
+}
+.letter-artist {
+    font-size: 40px;
+    display: inline-block;
+    transform: scale3d(0, 0, 1) rotate3d(0,0,1,90deg) translate3d(800px, 0px, 0px);
+    animation-name: card-text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    transform-origin: bottom center;
+    -webkit-text-stroke: 0.66px #000;
+}
+#card {
+    margin-top: 30px;
+    margin-left: 30px;
+    display: flex;
+    height: 100vh;
+    transform: translate(0px, 0px);
+    animation: card-slide;
+    animation-delay: 6s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+.space {
+    display: inline-block;
+    width: 0.5em;
+}
+
+span {
+    font-family: 'Bebas Neue';
+    color: white;
+}
+
+img {
+    animation-name: cover-slide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px solid #000;
+}
+
+.container {
+    margin-top: -10px;
+    margin-left: 20px;
+}
